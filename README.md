@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+## UPON CLONING, RUN COMMAND npm install IN THIS PROJECT'S TERMINAL. MAKE SURE YOU ARE IN THIS DIRECTORY!!!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Components you will need to build:
 
-## Available Scripts
+- App = Should return a div with className "container" that contains the order your Header, Menu, and Footer components will stack in.
 
-In the project directory, you can run:
+- Header = Should return a header for your page with the name of the pizza company. Use a <header> as the containing div in the return, give it className "header".
 
-### `npm start`
+- Menu = Should essentially act as a container for the UL of your pizza components. It should return a <main> tag of className "menu" that contains your UL. Should use .map to automate the creation of the Pizza objects. The UL should have the className "pizzas".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Pizza = Should take in a prop for the current individual pizza's data to be used. Should return an <li> tag as the container for the pizza. The LI's styling should be of className pizza but if it's .soldOut is true then it should also have the sold-out class in it's className.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Footer = Should return a <footer> tag of className "footer" as the container. If it is currently during open hours the footer should call the Order component, otherwise it should provide a message that says "We're closed, we welcome you to return between 10:00 AM and 10:00 PM. Utilize datetime logic for the current time, new Date().getHours() to get just the hours.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Order = Should return a <div> of className "order" as the container for this component's markup. Should only be called in the footer if the current time is during operation hours. Should provide a message that says "We're open! From 10:00 AM to 10:00 PM. Come visit us or order online!" and then have a button that says "Order" on it.
