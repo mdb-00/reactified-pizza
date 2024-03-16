@@ -43,3 +43,19 @@ const pizzaData = [
     soldOut: false,
   },
 ];
+
+function Menu() { 
+  return(
+    <main className="menu">
+      <ul className="pizzas">
+        {pizzaData.map((pizza, index) => 
+        <div key={index}>
+          {/* <h2>{pizza.name}</h2>
+          <p>{pizza.ingredients}</p> */}
+        </div>)}
+      </ul>
+    </main>
+  )
+}
+
+export default Menu;
