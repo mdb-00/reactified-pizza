@@ -1,3 +1,4 @@
+import Pizza from "../pizza/Pizza";
 
 const pizzaData = [
   {
@@ -47,12 +48,10 @@ const pizzaData = [
 function Menu() { 
   return(
     <main className="menu">
+      <h2>Menu:</h2>
+      <p>It's pizza...What more do you want?</p>
       <ul className="pizzas">
-        {pizzaData.map((pizza, index) => 
-        <div key={index}>
-          {/* <h2>{pizza.name}</h2>
-          <p>{pizza.ingredients}</p> */}
-        </div>)}
+        {pizzaData.map((pizza) => <Pizza pizzaObj={pizza}/>)}
       </ul>
     </main>
   )
